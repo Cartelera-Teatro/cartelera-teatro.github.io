@@ -12,7 +12,11 @@
 <main>
   <div class="topbar">
     <a class="app" href="./" data-keep-lang>Cartelera</a>
-    <button class="lang-toggle" type="button" lang="en" aria-label="View in English">English</button>
+    <div class="lang-switch" role="group" aria-label="Idioma / Language">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
+      <button type="button" data-set-lang="es" lang="es" aria-pressed="true" aria-label="Español">ES</button>
+      <button type="button" data-set-lang="en" lang="en" aria-pressed="false" aria-label="English">EN</button>
+    </div>
   </div>
 
   <div data-lang="es">

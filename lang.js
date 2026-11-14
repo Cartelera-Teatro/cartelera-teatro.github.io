@@ -17,12 +17,9 @@
     });
     var title = root.getAttribute("data-title-" + lang);
     if (title) document.title = title;
-    var button = document.querySelector(".lang-toggle");
-    if (button) {
-      button.textContent = lang === "en" ? "Español" : "English";
-      button.setAttribute("lang", lang === "en" ? "es" : "en");
-      button.setAttribute("aria-label", lang === "en" ? "Ver en español" : "View in English");
-    }
+    document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+      button.setAttribute("aria-pressed", String(button.getAttribute("data-set-lang") === lang));
+    });
     document.querySelectorAll("a[data-keep-lang]").forEach(function (a) {
       var url = new URL(a.getAttribute("href"), location.href);
       url.searchParams.set("lang", lang);
@@ -34,8 +31,9 @@
   apply(current);
 
   document.addEventListener("click", function (event) {
-    if (!event.target.closest(".lang-toggle")) return;
-    current = current === "en" ? "es" : "en";
+    var button = event.target.closest("[data-set-lang]");
+    if (!button) return;
+    current = button.getAttribute("data-set-lang");
     try { localStorage.setItem(KEY, current); } catch (e) {}
     apply(current);
   });
