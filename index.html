@@ -1,37 +1,69 @@
 <!doctype html>
-<html lang="es-MX">
+<html lang="es-MX" data-title-es="Cartelera · Soporte" data-title-en="Cartelera · Support">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cartelera · Soporte</title>
   <meta name="description" content="Soporte y contacto de Cartelera, la app de la cartelera teatral de México.">
   <link rel="stylesheet" href="styles.css">
+  <script src="lang.js" defer></script>
 </head>
 <body>
 <main>
-  <header>
-    <a class="app" href="./">Cartelera</a>
-    <h1>Soporte</h1>
-    <p>Cartelera es una app para iPhone y iPad con las obras de teatro en México: funciones, precios, teatros y dónde comprar boletos.</p>
-  </header>
-
-  <div class="card">
-    <p>¿Tienes una pregunta, encontraste un error o falta una obra? Escríbenos a
-      <a href="mailto:carteleramx2@gmail.com">carteleramx2@gmail.com</a>.</p>
+  <div class="topbar">
+    <a class="app" href="./" data-keep-lang>Cartelera</a>
+    <button class="lang-toggle" type="button" lang="en" aria-label="View in English">English</button>
   </div>
 
-  <h2>¿Puedo comprar boletos en la app?</h2>
-  <p>No. Cartelera te lleva al sitio, la taquilla o el contacto de cada vendedor, y la compra se hace con ellos.</p>
+  <div data-lang="es">
+    <header>
+      <h1>Soporte</h1>
+      <p>Cartelera es una app para iPhone y iPad con las obras de teatro en México: funciones, precios, teatros y dónde comprar boletos.</p>
+    </header>
 
-  <h2>Los datos de una obra están mal</h2>
-  <p>Mándanos el nombre de la obra y lo que hay que corregir. La información se actualiza varias veces al día.</p>
+    <div class="card">
+      <p>¿Tienes una pregunta, encontraste un error o falta una obra? Escríbenos a
+        <a href="mailto:carteleramx2@gmail.com">carteleramx2@gmail.com</a>.</p>
+    </div>
 
-  <h2>¿Necesito una cuenta?</h2>
-  <p>No. La app no pide registro ni recopila tus datos personales. Consulta la <a href="privacidad.html">política de privacidad</a>.</p>
+    <h2>¿Puedo comprar boletos en la app?</h2>
+    <p>No. Cartelera te lleva al sitio, la taquilla o el contacto de cada vendedor, y la compra se hace con ellos.</p>
 
-  <footer>
-    <a href="./">Soporte</a><a href="privacidad.html">Privacidad</a>
-  </footer>
+    <h2>Los datos de una obra están mal</h2>
+    <p>Mándanos el nombre de la obra y lo que hay que corregir. La información se actualiza varias veces al día.</p>
+
+    <h2>¿Necesito una cuenta?</h2>
+    <p>No. La app no pide registro ni recopila tus datos personales. Consulta la <a href="privacidad.html" data-keep-lang>política de privacidad</a>.</p>
+
+    <footer>
+      <a href="./" data-keep-lang>Soporte</a><a href="privacidad.html" data-keep-lang>Privacidad</a>
+    </footer>
+  </div>
+
+  <div data-lang="en" lang="en" hidden>
+    <header>
+      <h1>Support</h1>
+      <p>Cartelera is an iPhone and iPad app with the theater productions in Mexico: showtimes, prices, theaters and where to buy tickets.</p>
+    </header>
+
+    <div class="card">
+      <p>Have a question, found a bug or a missing play? Write to us at
+        <a href="mailto:carteleramx2@gmail.com">carteleramx2@gmail.com</a>.</p>
+    </div>
+
+    <h2>Can I buy tickets in the app?</h2>
+    <p>No. Cartelera takes you to each seller's website, box office or contact, and you buy from them.</p>
+
+    <h2>A play's details are wrong</h2>
+    <p>Send us the play's name and what needs fixing. The listings are updated several times a day.</p>
+
+    <h2>Do I need an account?</h2>
+    <p>No. The app doesn't ask you to sign up and doesn't collect your personal data. See the <a href="privacidad.html" data-keep-lang>privacy policy</a>.</p>
+
+    <footer>
+      <a href="./" data-keep-lang>Support</a><a href="privacidad.html" data-keep-lang>Privacy</a>
+    </footer>
+  </div>
 </main>
 </body>
 </html>
